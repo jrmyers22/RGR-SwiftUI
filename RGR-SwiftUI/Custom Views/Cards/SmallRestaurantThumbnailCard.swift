@@ -16,15 +16,14 @@ struct SmallRestaurantThumbnailCard: View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
                 .frame(width: 175, height: 90)
-                .overlay(Color.white.cornerRadius(8))
+                .overlay(Color("ReddishColor").cornerRadius(8))
                 .shadow(radius: 2)
             VStack {
                 HStack {
-                    Text(dollarSignStr)
-                    Text("•")
                     Text(cuisineStr)
-                    Text("•")
-                    Text(ratingStr)
+                        .foregroundColor(.white)
+                        .padding(.trailing, 80)
+                        .padding(.bottom, 10)
                 }.font(.system(size: 13))
                     .foregroundColor(.black)
                 HStack(spacing: 4) {
@@ -32,7 +31,7 @@ struct SmallRestaurantThumbnailCard: View {
                     AvailableTimeBubble(timeStr: "7:00")
                     AvailableTimeBubble(timeStr: "7:30")
                     Text("+5")
-                        .foregroundColor(.gray)
+                        .foregroundColor(.white)
                         .font(.system(size: 15))
                 }.font(.system(size: 13))
             }
@@ -53,10 +52,10 @@ struct AvailableTimeBubble: View {
         ZStack {
             RoundedRectangle(cornerRadius: 8)
                 .frame(width: 40, height: 30)
-            .overlay(Color("ReddishColor").cornerRadius(8))
+                .overlay(Color.white.cornerRadius(8))
             
             Text(timeStr)
-                .foregroundColor(.white)
+                .foregroundColor(Color("ReddishColor"))
         }
     }
 }

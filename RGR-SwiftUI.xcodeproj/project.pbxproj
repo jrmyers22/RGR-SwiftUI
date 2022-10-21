@@ -10,6 +10,11 @@
 		88AC9C2C28FE1EFC00D4195E /* SmallRestaurantThumbnailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C2B28FE1EFC00D4195E /* SmallRestaurantThumbnailCard.swift */; };
 		88AC9C2F28FE271800D4195E /* FullRestaurantCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C2E28FE271800D4195E /* FullRestaurantCard.swift */; };
 		88AC9C3128FE338800D4195E /* FloatingFilterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C3028FE338800D4195E /* FloatingFilterCard.swift */; };
+		88AC9C372900ED4900D4195E /* SingleRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C362900ED4900D4195E /* SingleRestaurantView.swift */; };
+		88AC9C472901F02900D4195E /* SelectedRestaurantInfoCardWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C462901F02900D4195E /* SelectedRestaurantInfoCardWithImage.swift */; };
+		88AC9C4A29022D4500D4195E /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C4929022D4500D4195E /* XButtonView.swift */; };
+		88AC9C4C29022DC100D4195E /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C4B29022DC100D4195E /* BottomButton.swift */; };
+		88AC9C4E2902321800D4195E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC9C4D2902321800D4195E /* WebView.swift */; };
 		88E2E01B28F47C5D00CC505E /* RGR_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2E01A28F47C5D00CC505E /* RGR_SwiftUIApp.swift */; };
 		88E2E01D28F47C5D00CC505E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E2E01C28F47C5D00CC505E /* ContentView.swift */; };
 		88E2E01F28F47C5E00CC505E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E2E01E28F47C5E00CC505E /* Assets.xcassets */; };
@@ -22,6 +27,11 @@
 		88AC9C2B28FE1EFC00D4195E /* SmallRestaurantThumbnailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallRestaurantThumbnailCard.swift; sourceTree = "<group>"; };
 		88AC9C2E28FE271800D4195E /* FullRestaurantCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullRestaurantCard.swift; sourceTree = "<group>"; };
 		88AC9C3028FE338800D4195E /* FloatingFilterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingFilterCard.swift; sourceTree = "<group>"; };
+		88AC9C362900ED4900D4195E /* SingleRestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantView.swift; sourceTree = "<group>"; };
+		88AC9C462901F02900D4195E /* SelectedRestaurantInfoCardWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRestaurantInfoCardWithImage.swift; sourceTree = "<group>"; };
+		88AC9C4929022D4500D4195E /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
+		88AC9C4B29022DC100D4195E /* BottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
+		88AC9C4D2902321800D4195E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		88E2E01728F47C5D00CC505E /* RGR-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RGR-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E2E01A28F47C5D00CC505E /* RGR_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGR_SwiftUIApp.swift; sourceTree = "<group>"; };
 		88E2E01C28F47C5D00CC505E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,8 +58,37 @@
 				88AC9C2B28FE1EFC00D4195E /* SmallRestaurantThumbnailCard.swift */,
 				88AC9C2E28FE271800D4195E /* FullRestaurantCard.swift */,
 				88AC9C3028FE338800D4195E /* FloatingFilterCard.swift */,
+				88AC9C462901F02900D4195E /* SelectedRestaurantInfoCardWithImage.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		88AC9C322900ECCD00D4195E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				88E2E01A28F47C5D00CC505E /* RGR_SwiftUIApp.swift */,
+				88E2E01E28F47C5E00CC505E /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		88AC9C332900ECFB00D4195E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				88AC9C4829022D3B00D4195E /* Buttons */,
+				88AC9C2D28FE26E000D4195E /* Cards */,
+				88AC9C362900ED4900D4195E /* SingleRestaurantView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		88AC9C4829022D3B00D4195E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				88AC9C4929022D4500D4195E /* XButtonView.swift */,
+				88AC9C4B29022DC100D4195E /* BottomButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		88E2E00E28F47C5D00CC505E = {
@@ -71,12 +110,12 @@
 		88E2E01928F47C5D00CC505E /* RGR-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				88E2E01A28F47C5D00CC505E /* RGR_SwiftUIApp.swift */,
 				88E2E01C28F47C5D00CC505E /* ContentView.swift */,
 				88E2E02828F4821F00CC505E /* WelcomeView.swift */,
-				88AC9C2D28FE26E000D4195E /* Cards */,
+				88AC9C4D2902321800D4195E /* WebView.swift */,
+				88AC9C332900ECFB00D4195E /* Custom Views */,
 				88E2E02A28F4826600CC505E /* DatePickerView.swift */,
-				88E2E01E28F47C5E00CC505E /* Assets.xcassets */,
+				88AC9C322900ECCD00D4195E /* App */,
 				88E2E02028F47C5E00CC505E /* Preview Content */,
 			);
 			path = "RGR-SwiftUI";
@@ -162,9 +201,14 @@
 			files = (
 				88E2E01D28F47C5D00CC505E /* ContentView.swift in Sources */,
 				88AC9C3128FE338800D4195E /* FloatingFilterCard.swift in Sources */,
+				88AC9C472901F02900D4195E /* SelectedRestaurantInfoCardWithImage.swift in Sources */,
 				88E2E02928F4821F00CC505E /* WelcomeView.swift in Sources */,
+				88AC9C372900ED4900D4195E /* SingleRestaurantView.swift in Sources */,
+				88AC9C4A29022D4500D4195E /* XButtonView.swift in Sources */,
 				88E2E02B28F4826600CC505E /* DatePickerView.swift in Sources */,
+				88AC9C4C29022DC100D4195E /* BottomButton.swift in Sources */,
 				88E2E01B28F47C5D00CC505E /* RGR_SwiftUIApp.swift in Sources */,
+				88AC9C4E2902321800D4195E /* WebView.swift in Sources */,
 				88AC9C2C28FE1EFC00D4195E /* SmallRestaurantThumbnailCard.swift in Sources */,
 				88AC9C2F28FE271800D4195E /* FullRestaurantCard.swift in Sources */,
 			);

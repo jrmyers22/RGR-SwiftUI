@@ -13,7 +13,7 @@ struct FloatingFilterCard: View {
             RoundedRectangle(cornerRadius: 5)
                 .strokeBorder(Color.gray, lineWidth: 1)
                 .frame(width: 210, height: 40)
-                .overlay(Color("FloatingFilterCardColor").cornerRadius(5))
+                .overlay(Color("ReddishColor").cornerRadius(5))
             HStack(spacing: 5) {
                 Text("👥 3")
                     .frame(width: 40)

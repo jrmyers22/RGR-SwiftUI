@@ -13,42 +13,69 @@ struct ContentView: View {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .red
     }
     
+    let names = ["Ai Fiori",
+                 "Bâtard",
+                 "Contra",
+                 "Crown Shy",
+                 "Eleven Madison Park",
+                 "Jungsik",
+                 "Kanoyama",
+                 "Kochi",
+                 "Kosaka",
+                 "L'Appart",
+                 "Le Bernardin",
+                 "Le Coucou",
+                 "Per Se",
+                 "Sushi Ginza Onodera",
+                 "Sushi Noz"]
+    
     @State private var searchText = ""
+    @State private var showSingleRestaurantView = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                ScrollView(showsIndicators: false) {
-                    LazyVGrid(
-                        columns: [GridItem(), GridItem()],
-                        spacing: 15
-                    ) {
-                        ForEach(0..<15) { _ in
-                            FullRestaurantCard()
-                        }
-                        
+                VStack {
+                    HStack {
+                        Text("Filter TBD...")
+                            .padding(.leading)
+                            .padding(.top)
+                        Spacer()
                     }
-                    .searchable(text: $searchText)
-                    .padding(8)
-                }
-                .background(Color("BackgroundColor"))
-                
-                .toolbar {
-                    Button(action: {
-                        print("Take them to a profile or something")
-                    }) {
-                        ZStack {
-                            Image("guy")
-                                .resizable()
-                                .frame(width: 30, height: 30, alignment: .center)
-                                .clipShape(Circle())
+                    ScrollView(showsIndicators: false) {
+                        LazyVGrid(
+                            columns: [GridItem(), GridItem()],
+                            spacing: 15
+                        ) {
+                            ForEach(0..<15) { i in
+                                FullRestaurantCard(restName: names[i])
+                                    .onTapGesture {
+                                        showSingleRestaurantView = true
+                                    }
+                            }
+                        }
+                        .searchable(text: $searchText)
+                        .padding(8)
+                    }
+                    .background(Color("BackgroundColor"))
+                    
+                    .toolbar {
+                        Button(action: {
+                            print("Take them to a profile or something")
+                        }) {
+                            ZStack {
+                                Image("guy")
+                                    .resizable()
+                                    .frame(width: 30, height: 30, alignment: .center)
+                                    .clipShape(Circle())
+                            }
                         }
                     }
-                }
-                .navigationBarTitle("Hello, Jacob", displayMode: .inline)
-                .toolbarBackground(Color("ReddishColor"), for: .navigationBar)
-                .toolbarBackground(.visible, for: .navigationBar)
+                    .navigationBarTitle("Hello, Jacob", displayMode: .inline)
+                    .toolbarBackground(Color("ReddishColor"), for: .navigationBar)
+                    .toolbarBackground(.visible, for: .navigationBar)
                 .toolbarColorScheme(.dark, for: .navigationBar)
+                }
                 
                 VStack {
                     Spacer()
@@ -56,6 +83,8 @@ struct ContentView: View {
                     FloatingFilterCard()
                 }
             }
+        }.fullScreenCover(isPresented: $showSingleRestaurantView) {
+            SingleRestaurantView()
         }
     }
     
