@@ -31,6 +31,7 @@ struct ContentView: View {
     
     @State private var searchText = ""
     @State private var showSingleRestaurantView = false
+    @State private var showFilterCriteria = false
     
     var body: some View {
         NavigationView {
@@ -79,8 +80,17 @@ struct ContentView: View {
                 
                 VStack {
                     Spacer()
-                    // TODO: Fix Bug
-                    FloatingFilterCard()
+                    Button(action: {
+                        print("Show filter")
+                        showFilterCriteria = true
+                    }) {
+                        FloatingFilterCard()
+                    }
+                    .sheet(isPresented: $showFilterCriteria) {
+                        FilterSheetCard(showFilterCriteria: $showFilterCriteria)
+                            .presentationDetents([.fraction(0.55)])
+                            .presentationDragIndicator(.visible)
+                    }
                 }
             }
         }.fullScreenCover(isPresented: $showSingleRestaurantView) {

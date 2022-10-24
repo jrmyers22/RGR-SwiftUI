@@ -33,7 +33,7 @@ struct SelectedRestaurantInfoCardWithImage: View {
                         .frame(height: (maxHeight + offset) < 0 ? maxHeight : maxHeight + offset,
                                alignment: .bottom)
                         .background(
-                            Color("TopBar"))
+                            Color.white)
                     
                 }
                 .frame(height: maxHeight)
